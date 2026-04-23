@@ -1,0 +1,25 @@
+<section class="section creations" id="creations">
+  <div class="section-header">
+    <span class="section-eyebrow">Portfolio</span>
+    <h2 class="section-title">Every piece is a <em>little work of art</em></h2>
+    <p class="section-sub">
+      Amigurumi, bag charms, coasters and more — each one crafted by hand,
+      slowly and with care.
+    </p>
+  </div>
+
+  <div class="cards-grid">
+    @for (card of cards; track card.name) {
+      <div class="card">
+        <div class="card-img">
+          <img [src]="card.img" [alt]="card.alt" />
+        </div>
+        <div class="card-body">
+          <span class="card-tag">{{ card.tag }}</span>
+          <h3 class="card-name">{{ card.name }}</h3>
+          <p class="card-desc">{{ card.desc }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>
